@@ -40,7 +40,7 @@ export default function Example() {
                     alt="Workflow"
                   />
                   <p className="ml-3 text-xl font-medium text-gray-200">
-                    Adresci
+                    Adresçi
                   </p>
                   <img
                     className="hidden lg:block h-8 w-auto"
