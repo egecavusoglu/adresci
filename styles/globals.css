@@ -19,3 +19,9 @@ a {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .header {
+    @apply text-lg text-gray-700 font-medium;
+  }
+}

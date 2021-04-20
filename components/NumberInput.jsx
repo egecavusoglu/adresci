@@ -2,7 +2,7 @@ import React from "react";
 const NumberInput = ({ label, ...props }) => {
   return (
     <div className="flex-1 py-4 px-3 min-w-min">
-      <p className="text-lg mb-3 text-green-400 ml-0.5 font-medium">{label}</p>
+      <p className="header mb-3 ml-0.5">{label}</p>
       <input
         type="text"
         placeholder="Flat Number"
