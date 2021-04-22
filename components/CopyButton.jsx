@@ -1,16 +1,17 @@
 import React from "react";
 import { DuplicateIcon } from "@heroicons/react/outline";
 import { useToasts } from "react-toast-notifications";
+import useStore from "store";
 const Copy = ({ copyPressed }) => {
   const { addToast } = useToasts();
+  const address = useStore((state) => state.address);
 
   const copy = () => {
-    copyPressed();
+    navigator.clipboard.writeText(address);
     addToast("Address Copied", {
       appearance: "success",
       autoDismiss: true,
       autoDismissTimeout: 2000,
-      placement: "bottom-center",
     });
   };
   return (

@@ -1,7 +1,10 @@
 import React from "react";
 import Copy from "./CopyButton";
+import useStore from "store";
 
-const AddressContainer = ({ address, copy, ...props }) => {
+const AddressContainer = ({ copy, ...props }) => {
+  const address = useStore((state) => state.address);
+
   return (
     <div className="max-w-2xl w-5/6 mx-auto ">
       <p className="ml-2 mb-3 header">Address</p>
