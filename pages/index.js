@@ -18,11 +18,11 @@ export default function Home({ residenceData }) {
   return (
     <div>
       <Head>
-        <title>Adresçi</title>
+        <title>adresçi</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="">
+      <main className="pb-60">
         <Navbar />
         <div className="bg-gray-800 py-12 rounded-b-xl  mx-auto">
           <Selector
@@ -35,6 +35,23 @@ export default function Home({ residenceData }) {
           <Address />
         </div>
       </main>
+      <footer className="bg-gray-800 px-5 py-4">
+        <p className="footer-text mb-4">
+          Please contact{" "}
+          <a className="text-blue-400" href="mailto:egecavusoglu@outlook.com">
+            egecavusoglu@outlook.com
+          </a>{" "}
+          for your residence to be featured.
+        </p>
+        <p className="footer-text text-xs text-gray-500">
+          {/* This tool is not an official tool and no user data is saved or tracked
+          by any means. */}
+          It is hereby declared that “adresci” is not an official tool by any
+          means and is excluded from any and all liabilities for damages. By
+          using the “adresci” address generator each user hereby accepts all
+          legal responsibility.
+        </p>
+      </footer>
     </div>
   );
 }
