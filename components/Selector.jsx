@@ -32,11 +32,16 @@ const Selector = ({ residenceData, residences, blocks, ...props }) => {
   };
 
   const checkAllFilled = (residence, block, flat) => {
-    return residence?.length > 0 && block?.length > 0 && block?.length > 0;
+    return residence?.length > 0 && block?.length > 0 && flat?.length > 0;
   };
 
   const generateAddress = (residence, block, flat) => {
-    let { template } = residenceData[residence];
+    let { template, blocks, blockCode } = residenceData[residence];
+    if (blockCode) {
+      const ind = blocks.indexOf(block);
+      const bCode = blockCode[ind];
+      template = template.replace("%*BLOCK-CODE*%", bCode);
+    }
     template = template.replace("%*BLOCK*%", block);
     template = template.replace("%*FLAT*%", flat);
     return template;
