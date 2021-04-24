@@ -1,9 +1,10 @@
 <p align="center">
 <img src="https://res.cloudinary.com/dpadpvzas/image/upload/v1619296502/adresci-logo.png"/>
 </p>
-# Adresçi
 
 ![Vercel](https://img.shields.io/badge/vercel-deployed-brightgreen)
+
+# Adresçi
 
 This is a tool for residents of all kinds to generate their home address hassle free. All Pull Requests are welcome.
 
