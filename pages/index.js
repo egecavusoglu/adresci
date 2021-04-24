@@ -16,7 +16,7 @@ export default function Home({ residenceData }) {
   const blocks = data ? data[residence]?.blocks : null;
 
   return (
-    <div>
+    <div className="min-h-screen flex flex-col justify-between">
       <Head>
         <title>adresçi</title>
         <link rel="icon" href="/favicon.ico" />
