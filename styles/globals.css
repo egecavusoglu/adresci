@@ -24,4 +24,7 @@ a {
   .header {
     @apply text-lg text-gray-700 font-medium;
   }
+  .footer-text {
+    @apply text-gray-300 text-sm;
+  }
 }
