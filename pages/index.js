@@ -5,35 +5,15 @@ import Selector from "components/Selector";
 import Address from "components/AddressContainer";
 import useStore from "store";
 
-const DATA = {
-  A: {
-    blocks: ["1", "2", "3"],
-  },
-  B: {
-    blocks: ["4", "5", "3"],
-  },
-};
-
-export default function Home() {
+export default function Home({ residenceData }) {
   const residence = useStore((state) => state.residence);
 
   const [address, setAddress] = useState();
 
   // Global data from server
-  const [data, setData] = useState(DATA);
-  const residences = Object.keys(data);
-  const blocks = data[residence]?.blocks;
-
-  useEffect(() => {
-    // fetchResidences();
-  }, []);
-
-  const fetchResidences = async () => {
-    const { residences } = await fetch("api/residences").then((res) =>
-      res.json()
-    );
-    console.log("RES", res);
-  };
+  const [data, setData] = useState(residenceData);
+  const residences = data ? Object.keys(data) : null;
+  const blocks = data ? data[residence]?.blocks : null;
 
   return (
     <div>
@@ -45,7 +25,11 @@ export default function Home() {
       <main className="">
         <Navbar />
         <div className="bg-gray-800 py-12 rounded-b-xl  mx-auto">
-          <Selector residences={residences} blocks={blocks} />
+          <Selector
+            residenceData={residenceData}
+            residences={residences}
+            blocks={blocks}
+          />
         </div>
         <div className="mt-8">
           <Address />
@@ -54,3 +38,22 @@ export default function Home() {
     </div>
   );
 }
+
+import db from "./api/db";
+export async function getStaticProps() {
+  return {
+    props: {
+      residenceData: db,
+    },
+  };
+}
+
+// useEffect(() => {
+//   // fetchData();
+// }, []);
+
+// const fetchData = async () => {
+//   const { data } = await fetch("api/residences").then((res) => res.json());
+//   console.log("RES", data);
+//   setData(data);
+// };

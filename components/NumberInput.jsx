@@ -11,7 +11,7 @@ const NumberInput = ({ label, onChangeFlat, ...props }) => {
     <div className="flex-1 py-4 px-3 min-w-min w-full">
       <p className="header mb-3 ml-0.5">{label}</p>
       <input
-        value={flat}
+        value={flat || ""}
         onChange={onChangeText}
         type="text"
         placeholder="Flat Number"
