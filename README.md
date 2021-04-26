@@ -3,7 +3,7 @@
 </p>
 
 ![Vercel](https://img.shields.io/badge/vercel-deployed-brightgreen)
-
+![License](https://img.shields.io/badge/license-MIT-red)
 # Adresçi
 
 This is a tool for residents of all kinds to generate their home address hassle free. All Pull Requests are welcome.
@@ -16,5 +16,6 @@ Next.js and TailwindCSS were used as the stack.
 
 ## Todos
 
-- [] Language support with i18n.js
-- [] Implement React-Select for better styling across browsers.
+- [ ] Language support with i18n.js
+- [ ] Implement React-Select for better styling across browsers.
+- [ ] Automate the addition of new residences with formik.
