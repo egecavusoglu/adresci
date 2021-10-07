@@ -39,7 +39,7 @@ export default function Home({ residenceData }) {
         <p className="footer-text mb-4">
           Please contact{" "}
           <a className="text-blue-400" href="mailto:egecavusoglu@outlook.com">
-            egecavusoglu@outlook.com
+            egecavusogluu@outlook.com
           </a>{" "}
           for your residence to be featured.
         </p>
